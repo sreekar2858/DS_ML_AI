@@ -2,39 +2,10 @@ import os
 import argparse
 import kagglehub
 
-# Map of dataset levels to Kaggle dataset slugs (update these slugs as needed!)
-DATASETS = {
-    "beginner": [
-        "uciml/iris",
-        "abhijithudayakumar/the-boston-housing-dataset",
-        "paultimothymooney/chest-xray-pneumonia",  # Substitute for MNIST if no MNIST Kaggle slug
-        "heptapod/titanic",
-        "uciml/wine-quality",
-        "shubhendra7/diamonds",
-    ],
-    "intermediate": [
-        "tensorflow-datasets/cifar10",
-        "zalando-research/fashionmnist",
-        "catherineh/dog-breed-identification",
-        "uciml/pima-indians-diabetes-database",
-        "ashishpatel26/sentiment-analysis-dataset",
-        "josesalasbank/bank-marketing-dataset",
-    ],
-    "advanced": [
-        "imagenet-object-localization-challenge",
-        "coco-dataset/coco-2017-dataset",
-        "cityscapes/cityscapes-dataset",
-        "kayichan/vqa-dataset",
-        "alxmamaev/open-images-dataset",
-        "mozillaorg/common-voice",
-        "shubhendra7/segment-anything-dataset",
-    ],
-    "multimodal": [
-        "kayichan/vqa-dataset",
-        "asbdr67/egotv-dataset",
-        "worldbank/world-development-indicators",
-    ],
-}
+import yaml
+# Load dataset information from YAML file
+with open(os.path.join(os.path.dirname(__file__), 'dataset_info.yaml'), 'r') as file:
+    DATASETS = yaml.safe_load(file)
 
 def download_datasets(level="beginner", download_path="./data/raw/"):
     os.makedirs(os.path.join(download_path, level), exist_ok=True)
@@ -46,9 +17,9 @@ def download_datasets(level="beginner", download_path="./data/raw/"):
     for dataset in DATASETS[level]:
         try:
             print(f"Downloading dataset {dataset} ...")
-            path = kagglehub.dataset_download(dataset, path=download_path, unzip=True)
-            downloaded_paths[dataset] = path
-            print(f"Downloaded and extracted to: {path}")
+            cache_path = kagglehub.dataset_download(dataset, path=download_path)
+            downloaded_paths[dataset] = cache_path
+            print(f"Downloaded and extracted to: {cache_path}")
         except Exception as e:
             print(f"Failed to download {dataset}: {e}")
     return downloaded_paths

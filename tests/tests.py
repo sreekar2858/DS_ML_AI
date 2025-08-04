@@ -1,2 +1,2 @@
-import marimo as mo
-mo.md("Tests for the DS_ML_AI repository")
+import os
+print(os.path.exists("./data/raw/beginner/"))

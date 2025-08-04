@@ -1,0 +1,85 @@
+datadir: data/raw
+beginner:
+  Iris:
+    handle: uciml/iris
+    path: Iris.csv
+    source: kaggle
+  Boston_Housing:
+    handle: boston_housing
+    source: url
+    url: https://archive.ics.uci.edu/ml/machine-learning-databases/housing/housing.data
+    separator: tab
+    header: True
+  # Chest_XRay:
+  #   handle: paultimothymooney/chest-xray-pneumonia
+  #   source: kaggle
+  MNIST:
+    handle: MNIST
+    source: torchvision
+  Titanic:
+    handle: titanic
+    source: url
+    url: https://web.stanford.edu/class/archive/cs/cs109/cs109.1166/stuff/titanic.csv
+  Wine_Quality:
+    handle: yasserh/wine-quality-dataset
+    path: WineQT.csv
+    source: kaggle
+  Diamonds:
+    handle: shivam2503/diamonds
+    path: diamonds.csv
+    source: kaggle
+
+intermediate:
+  CIFAR10:
+    handle: CIFAR10
+    source: torchvision
+  Fashion_MNIST:
+    handle: FashionMNIST
+    source: torchvision
+  Dog_Breed_Identification:
+    handle: jessicali9530/stanford-dogs-dataset
+    source: kaggle
+  PIMA_Indians_Diabetes:
+    handle: uciml/pima-indians-diabetes-database
+    path: diabetes.csv
+    source: kaggle
+  Sentiment_Analysis:
+    handle: kazanova/sentiment140
+    path: training.1600000.processed.noemoticon.csv
+    source: kaggle
+  Bank_Marketing:
+    handle: janiobachmann/bank-marketing-dataset
+    path: bank.csv
+    source: kaggle
+
+advanced:
+  ImageNet:
+    handle: ImageNet
+    source: torchvision
+  COCO:
+    handle: awsaf49/coco-2017-dataset
+    source: kaggle
+  Cityscapes:
+    handle: shuvoalok/cityscapes
+    source: kaggle
+  VQA:
+    handle: bhavikardeshna/visual-question-answering-computer-vision-nlp
+    source: kaggle
+  Open_Images:
+    handle: open_images_v4
+    source: tfds
+  Common_Voice:
+    handle: mozillaorg/common-voice
+    source: kaggle
+
+multimodal:
+  VQA:
+    handle: kayichan/vqa-dataset
+    path: VQA
+  EgoTV:
+    handle: https://scontent-ord5-3.xx.fbcdn.net/m1/v/t6/An-owV1ZzGsRZQuPoFlwI-eH5w_0BxWR1RgcBZu1Oi-c9MD2zs-DPAcTGRhGBtD3jj2Fw-eFWSN1DdIv2CznTjLu-dfLbLH_vToSBlFzOJ0b_QM.zip?_nc_gid=T9-rm6DLW8h2TmilQyhZRQ&_nc_oc=AdnYlFmvBH2nJU7wPHJ0pGtKezQoU7334rMclyMWOR-ZzNpiWj1OaRL1ls6gI-RK6QE&ccb=10-5&oh=00_AfQtn4cY0tWghDuNpyVSdALQqLLJnpk7NWegQjbTaG9iDA&oe=68B43229&_nc_sid=3af025
+    source: url
+    zip: true
+  World_Development_Indicators:
+    handle: theworldbank/world-development-indicators
+    source: kaggle

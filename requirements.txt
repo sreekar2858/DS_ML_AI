@@ -1,0 +1,111 @@
+# ==============================================================================
+# DS_ML_AI: Data Science, Machine Learning & AI Project Dependencies
+# ==============================================================================
+
+# Core Data Science Libraries
+# ==============================================================================
+numpy>=1.24.0                    # Numerical computing
+pandas>=2.0.0                    # Data manipulation and analysis
+scipy>=1.10.0                    # Scientific computing
+scikit-learn>=1.3.0              # Machine learning algorithms
+matplotlib>=3.7.0                # Plotting and visualization
+seaborn>=0.12.0                  # Statistical data visualization
+plotly>=5.15.0                   # Interactive visualizations
+
+# Deep Learning Frameworks
+# ==============================================================================
+torch>=2.0.0                     # PyTorch deep learning framework
+torchvision>=0.15.0              # Computer vision utilities for PyTorch
+torchaudio>=2.0.0                # Audio processing for PyTorch
+tensorflow>=2.13.0               # TensorFlow deep learning framework
+tensorflow-datasets>=4.9.9       # Pre-built datasets for TensorFlow
+keras>=2.13.0                    # High-level neural networks API
+
+# Computer Vision
+# ==============================================================================
+opencv-python>=4.8.0             # Computer vision library
+Pillow>=10.0.0                   # Image processing
+albumentations>=1.3.0            # Image augmentation
+imgaug>=0.4.0                    # Image augmentation
+
+# Natural Language Processing
+# ==============================================================================
+transformers>=4.30.0             # Hugging Face transformers
+tokenizers>=0.13.0               # Fast tokenizers
+datasets>=2.14.0                 # Hugging Face datasets
+nltk>=3.8.0                      # Natural language toolkit
+spacy>=3.6.0                     # Industrial-strength NLP
+gensim>=4.3.0                    # Topic modeling and document similarity
+
+# Data Loading and Processing
+# ==============================================================================
+PyYAML>=6.0                      # YAML parser (used in dataset_info.yaml)
+kagglehub>=0.2.0                 # Kaggle dataset downloads
+requests>=2.31.0                 # HTTP library
+urllib3>=2.0.0                   # URL handling
+beautifulsoup4>=4.12.0           # Web scraping
+lxml>=4.9.0                      # XML and HTML processing
+
+# Jupyter and Interactive Development
+# ==============================================================================
+jupyter>=1.0.0                   # Jupyter notebook
+jupyterlab>=4.0.0                # JupyterLab environment
+ipykernel>=6.25.0                # IPython kernel for Jupyter
+ipywidgets>=8.1.0                # Interactive widgets
+marimo>=0.14.15                  # Modern notebook environment (used in tests)
+
+# Machine Learning Utilities
+# ==============================================================================
+optuna>=3.3.0                    # Hyperparameter optimization
+hyperopt>=0.2.7                  # Hyperparameter optimization
+mlflow>=2.5.0                    # ML lifecycle management
+wandb>=0.15.0                    # Weights & Biases for experiment tracking
+tensorboard>=2.13.0              # TensorBoard for visualization
+
+# Statistical Analysis
+# ==============================================================================
+statsmodels>=0.14.0              # Statistical modeling
+pingouin>=0.5.3                  # Statistical analysis
+pymc>=5.6.0                      # Probabilistic programming
+
+# Performance and Utilities
+# ==============================================================================
+tqdm>=4.65.0                     # Progress bars
+joblib>=1.3.0                    # Parallel computing
+numba>=0.57.0                    # JIT compilation for numerical functions
+dask>=2023.7.0                   # Parallel computing
+polars>=0.18.0                   # Fast dataframes (alternative to pandas)
+
+# Development and Testing
+# ==============================================================================
+pytest>=7.4.0                    # Testing framework
+pytest-cov>=4.1.0                # Coverage reporting
+black>=23.7.0                    # Code formatting
+isort>=5.12.0                    # Import sorting
+flake8>=6.0.0                    # Linting
+mypy>=1.5.0                      # Type checking
+pre-commit>=3.3.0                # Git hooks
+
+# File and Data Formats
+# ==============================================================================
+openpyxl>=3.1.0                  # Excel file handling
+h5py>=3.9.0                      # HDF5 file format
+pyarrow>=12.0.0                  # Apache Arrow (for Parquet files)
+zarr>=2.16.0                     # Chunked, compressed N-dimensional arrays
+
+# Cloud and Deployment
+# ==============================================================================
+boto3>=1.28.0                    # AWS SDK
+google-cloud-storage>=2.10.0     # Google Cloud Storage
+azure-storage-blob>=12.17.0      # Azure Blob Storage
+fastapi>=0.101.0                 # Web framework for APIs
+uvicorn>=0.23.0                  # ASGI server
+streamlit>=1.25.0                # Web app framework
+
+# Additional Utilities
+# ==============================================================================
+python-dotenv>=1.0.0             # Environment variable management
+click>=8.1.0                     # Command line interface creation
+rich>=13.5.0                     # Rich text and beautiful formatting
+loguru>=0.7.0                    # Logging made easy
+psutil>=5.9.0                    # System and process utilities
